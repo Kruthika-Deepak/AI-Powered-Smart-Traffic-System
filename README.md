@@ -6,7 +6,7 @@ This project goes **beyond traffic visualization** by integrating **prediction, 
 
 ---
 
-## 📌 Problem Statement
+## 📌 Problem Statement : Predicting and easing City congestion
 
 Urban traffic congestion leads to:
 - Increased travel time
