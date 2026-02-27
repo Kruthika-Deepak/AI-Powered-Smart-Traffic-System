@@ -1,0 +1,121 @@
+{
+  "identity": {
+    "name": "Bangalore Traffic Sentinel",
+    "persona": "E1 - The Anti-AI Designer",
+    "tone": "Professional, Urban-Tech, Decision-Support, High-Contrast",
+    "theme_mode": "dark"
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Rajdhani, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "google_fonts_import": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Rajdhani:wght@500;600;700&display=swap",
+    "usage": {
+      "h1": "font-rajdhani font-bold text-4xl tracking-tight text-white",
+      "h2": "font-rajdhani font-semibold text-2xl tracking-tight text-zinc-100",
+      "h3": "font-rajdhani font-medium text-xl text-zinc-200",
+      "body": "font-inter text-base text-zinc-400 leading-relaxed",
+      "label": "font-mono text-xs uppercase tracking-wider text-zinc-500",
+      "data": "font-mono text-sm font-medium text-zinc-100"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#09090B",
+      "surface": "#18181B",
+      "surface_highlight": "#27272A",
+      "border": "#27272A",
+      "primary": "#3B82F6",
+      "primary_glow": "rgba(59, 130, 246, 0.5)",
+      "text_primary": "#FAFAFA",
+      "text_secondary": "#A1A1AA",
+      "text_muted": "#52525B"
+    },
+    "traffic_status": {
+      "normal": {
+        "color": "#10B981",
+        "bg": "rgba(16, 185, 129, 0.1)",
+        "border": "rgba(16, 185, 129, 0.2)",
+        "glow": "0 0 10px rgba(16, 185, 129, 0.4)"
+      },
+      "moderate": {
+        "color": "#F59E0B",
+        "bg": "rgba(245, 158, 11, 0.1)",
+        "border": "rgba(245, 158, 11, 0.2)",
+        "glow": "0 0 10px rgba(245, 158, 11, 0.4)"
+      },
+      "high": {
+        "color": "#EF4444",
+        "bg": "rgba(239, 68, 68, 0.1)",
+        "border": "rgba(239, 68, 68, 0.2)",
+        "glow": "0 0 15px rgba(239, 68, 68, 0.5)"
+      }
+    },
+    "gradients": {
+      "subtle_overlay": "linear-gradient(to bottom, rgba(9,9,11,0) 0%, rgba(9,9,11,0.8) 100%)",
+      "active_border": "linear-gradient(90deg, #3B82F6 0%, #06B6D4 100%)"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid (Mode B - High Density)",
+    "spacing": {
+      "container_padding": "p-6 md:p-8",
+      "gap": "gap-4 md:gap-6",
+      "section_spacing": "space-y-8"
+    },
+    "structure": {
+      "dashboard": "grid grid-cols-1 lg:grid-cols-12 h-screen overflow-hidden",
+      "sidebar": "lg:col-span-3 border-r border-white/10 bg-zinc-950/50 backdrop-blur-xl p-6 flex flex-col gap-6 z-20",
+      "main_map": "lg:col-span-9 relative h-full w-full z-10",
+      "overlay_panel": "absolute top-6 right-6 w-80 bg-zinc-950/90 backdrop-blur-md border border-white/10 rounded-lg p-4 shadow-2xl z-30"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-blue-600 hover:bg-blue-500 text-white font-medium px-4 py-2 rounded-md shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all duration-300 border border-blue-400/20",
+      "secondary": "bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-medium px-4 py-2 rounded-md border border-zinc-700 transition-all duration-200",
+      "ghost": "bg-transparent hover:bg-white/5 text-zinc-400 hover:text-white px-3 py-1.5 rounded-md transition-colors"
+    },
+    "cards": {
+      "glass": "bg-zinc-900/70 backdrop-blur-md border border-white/5 rounded-lg shadow-xl",
+      "solid": "bg-zinc-900 border border-zinc-800 rounded-lg",
+      "hover_effect": "hover:border-zinc-600 transition-colors duration-300"
+    },
+    "inputs": {
+      "base": "bg-zinc-950/50 border border-zinc-800 text-zinc-100 rounded-md px-3 py-2 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-zinc-600"
+    },
+    "map_markers": {
+      "style": "custom-div-icon",
+      "html": "<div class='w-4 h-4 rounded-full border-2 border-white shadow-lg' style='background-color: {color}; box-shadow: {glow}'></div>"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-black/40 border border-white/10",
+    "neon_glow": "shadow-[0_0_10px_rgba(var(--color-rgb),0.5)]",
+    "grid_lines": "bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]",
+    "map_style": "CartoDB.DarkMatter"
+  },
+  "image_urls": {
+    "background_texture": "https://images.unsplash.com/photo-1524062974533-01c8cc8ab725?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "login_bg": "https://images.unsplash.com/photo-1708067077797-74f83eaa8231?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Ensure 'Rajdhani' and 'JetBrains Mono' are imported in index.css.",
+    "2. MAP: Use 'react-leaflet' with 'CartoDB Dark Matter' tiles for the professional dark mode look. Do NOT use default OpenStreetMap tiles.",
+    "3. LAYOUT: Implement a 'Command Center' layout. Map is the base layer. Controls float over it or sit in a semi-transparent sidebar.",
+    "4. INTERACTION: When a user selects a location, flyTo that location on the map and update the Insights Panel.",
+    "5. VISUALS: Use the 'traffic_status' colors for map markers and charts. Add the 'glow' effect to high-congestion markers.",
+    "6. CHARTS: Use 'recharts' with a dark theme. Hide grid lines or make them very subtle (#333). Tooltips must be dark.",
+    "7. DATA-TESTID: Add 'data-testid' to all interactive elements (e.g., 'location-select', 'day-select', 'map-marker-silkboard').",
+    "8. MOCK DATA: Since backend is simulated, create a robust 'mockTrafficData' object in a separate file to power the visualizations."
+  ],
+  "universal_guidelines": [
+    "Avoid generic 'Bootstrap' looks. Use custom spacing and borders.",
+    "Dark mode is mandatory. Do not implement light mode.",
+    "Use 'sonner' for notifications (e.g., 'Data updated').",
+    "Ensure all text has sufficient contrast against the dark background (APCA/WCAG AA).",
+    "No 'Lorem Ipsum'. Use realistic traffic data labels (e.g., 'PCU/hr', 'Avg Speed', 'Congestion Level')."
+  ]
+}

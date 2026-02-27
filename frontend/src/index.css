@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Rajdhani:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg-primary: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-surface-highlight: #F1F5F9;
+    --border-color: #E2E8F0;
+    --primary-blue: #3B82F6;
+    --primary-glow: rgba(59, 130, 246, 0.3);
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+    --traffic-normal: #10B981;
+    --traffic-moderate: #F59E0B;
+    --traffic-high: #EF4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+/* Font utilities */
+.font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Leaflet map customizations - Light mode */
+.leaflet-container {
+    background-color: #F8FAFC !important;
+    font-family: 'Inter', sans-serif;
+}
+
+.leaflet-control-zoom {
+    border: 1px solid #E2E8F0 !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.leaflet-control-zoom a {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background-color: #F1F5F9 !important;
+}
+
+.leaflet-control-attribution {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: #64748B !important;
+    font-size: 10px !important;
+}
+
+.leaflet-control-attribution a {
+    color: #3B82F6 !important;
+}
+
+/* Custom marker styles */
+.traffic-marker {
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.traffic-marker:hover {
+    transform: scale(1.2);
+}
+
+.traffic-marker-normal {
+    background-color: var(--traffic-normal);
+    box-shadow: 0 2px 12px rgba(16, 185, 129, 0.4);
+}
+
+.traffic-marker-moderate {
+    background-color: var(--traffic-moderate);
+    box-shadow: 0 2px 12px rgba(245, 158, 11, 0.4);
+}
+
+.traffic-marker-high {
+    background-color: var(--traffic-high);
+    box-shadow: 0 2px 15px rgba(239, 68, 68, 0.5);
+    animation: pulse-high 2s infinite;
+}
+
+@keyframes pulse-high {
+    0%, 100% {
+        box-shadow: 0 2px 15px rgba(239, 68, 68, 0.5);
+    }
+    50% {
+        box-shadow: 0 2px 25px rgba(239, 68, 68, 0.7);
+    }
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+}
+
+/* Glow effects - Light mode */
+.glow-blue {
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25);
+}
+
+.glow-green {
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+}
+
+.glow-orange {
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
+}
+
+.glow-red {
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3);
+}
+
+@layer base {
+    :root {
+        --background: 210 40% 98%;
+        --foreground: 222 84% 5%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 84% 5%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 84% 5%;
+        --primary: 217 91% 60%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 222 47% 11%;
+        --muted: 210 40% 96%;
+        --muted-foreground: 215 16% 47%;
+        --accent: 210 40% 96%;
+        --accent-foreground: 222 47% 11%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 217 91% 60%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
