@@ -57,5 +57,3 @@ This platform is **predictive and prescriptive**.
 - Rule-based fallback mechanisms
 
 ---
-
-## 🏗️ System Architecture
