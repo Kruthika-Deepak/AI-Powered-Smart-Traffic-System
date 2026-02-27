@@ -57,8 +57,6 @@ This platform is **predictive and prescriptive**.
 - Rule-based fallback mechanisms
 
 ---
----
-
 ## 📊 Dataset Description
 
 The system uses **time-series traffic datasets** suitable for future prediction, including:
@@ -81,7 +79,7 @@ These datasets enable:
 - supabase
 
 ### Machine Learning
-- Scikit-learn / XGBoost
+- Scikit-learn / Random Forest
 - Time-series feature engineering
 - Hybrid rule + ML decision logic
 
