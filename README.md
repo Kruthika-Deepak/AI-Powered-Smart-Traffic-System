@@ -128,22 +128,4 @@ These datasets enable:
 - Graceful degradation:
   - ML service failure triggers rule-based signal logic
 
----
-
-## 🚀 Getting Started
-
-```bash
-# Clone repository
-git clone https://github.com/your-username/city-congestion-platform.git
-cd city-congestion-platform
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run backend
-uvicorn backend.main:app --reload
-
-# Run frontend
-cd frontend
-npm install
 npm run dev
